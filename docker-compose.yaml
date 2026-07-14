@@ -1,0 +1,46 @@
+services:
+  mysql:
+    image: mysql:8.0.38
+    container_name: mysql-compose
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: codelai
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    image: quocvybe
+    build: ./Crud
+
+    container_name: identity-service
+
+    depends_on:
+      - mysql
+
+    environment:
+          url: "jdbc:mysql://mysql:3306/codelai"
+          username: root
+          password: root
+
+    ports:
+      - "8080:8080"
+
+  frontend:
+    image: frontend-react
+    build: ./my-app
+
+    container_name: frontend-react
+
+    depends_on:
+      - backend
+
+    ports:
+      - "5173:5173"
+
+volumes:
+  mysql_data:
