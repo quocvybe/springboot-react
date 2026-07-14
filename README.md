@@ -1,10 +1,10 @@
 # 🚀 Spring Boot + React + Docker Compose
 
-A full-stack CRUD application built with Spring Boot, React, MySQL, Docker, and Docker Compose.
+A full-stack CRUD application built with **Spring Boot**, **React**, **MySQL**, **Docker**, and **Docker Compose**.
 
 ---
 
-# 📌 Technologies
+## 📌 Technologies
 
 ### Backend
 - Java 17
@@ -26,18 +26,18 @@ A full-stack CRUD application built with Spring Boot, React, MySQL, Docker, and 
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-```
-Springboot+react
+```text
+springboot-react
 │
-├── Crud                 # Spring Boot Backend
-│   ├── src
+├── Crud/                    # Spring Boot Backend
+│   ├── src/
 │   ├── Dockerfile
 │   └── pom.xml
 │
-├── my-app               # React Frontend
-│   ├── src
+├── my-app/                  # React Frontend
+│   ├── src/
 │   ├── Dockerfile
 │   └── package.json
 │
@@ -47,45 +47,45 @@ Springboot+react
 
 ---
 
-# ⚙️ Features
+## ⚙️ Features
 
-- User CRUD
-- REST API
-- React Frontend
-- MySQL Database
-- Dockerized Backend
-- Dockerized Frontend
-- Docker Compose Deployment
+- ✅ User CRUD
+- ✅ REST API
+- ✅ React Frontend
+- ✅ MySQL Database
+- ✅ Dockerized Backend
+- ✅ Dockerized Frontend
+- ✅ Docker Compose Deployment
 
 ---
 
 # 🐳 Run with Docker Compose
 
-Clone project
+### Clone repository
 
 ```bash
-git clone https://github.com/quocvybe/springboot-react-docker-compose.git
+git clone https://github.com/quocvybe/springboot-react.git
 ```
 
-Go to project
+### Go to project
 
 ```bash
-cd springboot-react-docker-compose
+cd springboot-react
 ```
 
-Start project
+### Build and start all services
 
 ```bash
 docker compose up --build
 ```
 
-Run in background
+### Run in background
 
 ```bash
 docker compose up -d --build
 ```
 
-Stop
+### Stop containers
 
 ```bash
 docker compose down
@@ -93,7 +93,7 @@ docker compose down
 
 ---
 
-# 🌐 Services
+## 🌐 Services
 
 | Service | URL |
 |----------|-----|
@@ -103,11 +103,11 @@ docker compose down
 
 ---
 
-# 📷 Screenshots
+## 📷 Screenshots
 
-## Home Page
+### Home Page
 
-(Add your screenshot here)
+> Add screenshots here.
 
 ```
 images/home.png
@@ -115,49 +115,49 @@ images/home.png
 
 ---
 
-# 🛠 API Example
+## 🛠 API Example
 
-Get all users
+### Get all users
 
-```
+```http
 GET /Crud/users
 ```
 
-Create user
+### Create user
 
-```
+```http
 POST /Crud/users
 ```
 
-Update user
+### Update user
 
-```
+```http
 PUT /Crud/users/{id}
 ```
 
-Delete user
+### Delete user
 
-```
+```http
 DELETE /Crud/users/{id}
 ```
 
 ---
 
-# 📦 Docker
+## 📦 Docker
 
-Build Backend
+### Build Backend
 
 ```bash
 docker build -t backend ./Crud
 ```
 
-Build Frontend
+### Build Frontend
 
 ```bash
 docker build -t frontend ./my-app
 ```
 
-Run all services
+### Run all services
 
 ```bash
 docker compose up --build
@@ -165,9 +165,10 @@ docker compose up --build
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Quốc Vỵ**
 
-GitHub:
-https://github.com/quocvybe
+GitHub: https://github.com/quocvybe
+
+Repository: https://github.com/quocvybe/springboot-react
